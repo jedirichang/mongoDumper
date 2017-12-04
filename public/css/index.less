@@ -1,0 +1,316 @@
+@import 'base';
+.mainContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: montserratRegular;
+    .header {
+        position: absolute;
+        height: 5rem;
+        width: 100%;
+        line-height: 5rem;
+        border-bottom: 1px solid @grey;
+        text-align: center;
+        font-family: montserratBold;
+        font-size: @f4;
+        color: @blue;
+        text-transform: uppercase;
+        .reset {
+            position: absolute;
+            width: 8rem;
+            height: 3.5rem;
+            background: #d61c22;
+            line-height: 3.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            top: 0.7rem;
+            left: 1rem;
+            text-transform: uppercase;
+            border-radius: 5px;
+            font-family: montserratBold;
+            color: white;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0px 2px 5px black;
+            }
+        }
+    }
+    .loader {
+        position: absolute;
+        width: 20rem;
+        bottom: 1rem;
+        right: 5rem;
+        display: none;
+    }
+    .notify {
+        position: absolute;
+        min-width: 43rem;
+        width: auto;
+        top: 1rem;
+        height: 5rem;
+        background: #e52817;
+        right: 1rem;
+        /* box-shadow: 0px 2px 5px black; */
+        color: white;
+        text-transform: uppercase;
+        font-size: @f3;
+        line-height: 5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        display: none;
+        &.success {
+            background: @green;
+        }
+        &.fail {
+            background: @red;
+        }
+    }
+    .inputs {
+        position: absolute;
+        width: 21rem;
+        bottom: 0;
+        left: 0rem;
+        top: 8rem;
+        .values {
+            position: absolute;
+            top: 0;
+            bottom: 5rem;
+            width: 100%;
+            .source {
+                position: relative;
+                height: 20rem;
+                width: 100%;
+                box-sizing: border-box;
+                float: left;
+                // background: black;
+                .headerInput {
+                    position: absolute;
+                    font-family: montserratBold;
+                    font-size: 1.5rem;
+                    left: 1.5rem;
+                    color: @blue;
+                    text-transform: uppercase;
+                }
+                float: left;
+                .enter {
+                    position: relative;
+                    /* top: 6rem; */
+                    margin-top: 5rem;
+                    /* left: 5.5rem; */
+                    margin-left: 1.5rem;
+                }
+                .btn {
+                    .footer.btn;
+                    position: absolute;
+                    right: 0.2rem;
+                    margin-left: 15.5rem;
+                    margin-top: 1.5rem;
+                }
+            }
+            .destination {
+                position: relative;
+                height: 18rem;
+                width: 100%;
+                margin-top: 2rem;
+                box-sizing: border-box;
+                float: left;
+                // background: black;
+                .headerInput {
+                    position: absolute;
+                    font-family: montserratBold;
+                    font-size: 1.5rem;
+                    left: 1.5rem;
+                    color: @blue;
+                    text-transform: uppercase;
+                }
+                .enter {
+                    position: relative;
+                    margin-top: 5rem;
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+        .footer {
+            position: absolute;
+            width: 100%;
+            height: 10rem;
+            bottom: 18rem;
+            // background: red;
+            // border-top: 1px solid @black2;
+            // border-bottom: 1px solid @black2;
+            .btn {
+                position: relative;
+                min-width: 7rem;
+                width: auto;
+                height: 3rem;
+                margin-top: 0.5rem;
+                background: @blue;
+                display: block;
+                line-height: 3rem;
+                color: white;
+                // margin-top: 5rem;
+                // border-radius: 5px;
+                // line-height: 4rem;
+                text-align: center;
+                text-transform: uppercase;
+                margin-left: 7rem;
+                margin-right: 0;
+                // right: 0;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                // display: inline-block;
+                float: left;
+                font-size: 1.2rem;
+                cursor: pointer;
+                &.dumpAll {
+                    margin-left: 11rem;
+                }
+                .small_loader {
+                    position: absolute;
+                    width: 3rem;
+                    // display: none;
+                }
+                &.disableButton {
+                    background: grey;
+                }
+            }
+        }
+    }
+    .dbContainer {
+        position: absolute;
+        width: 80rem;
+        top: 5rem;
+        bottom: 0;
+        left: 24rem;
+        // overflow: auto;
+        border-left: 1px solid @grey;
+        border-right: 1px solid @grey;
+        .dbListHeader {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            height: 3rem;
+            line-height: 3rem;
+            border-bottom: 1px solid @grey;
+            font-size: 2rem;
+            text-transform: uppercase;
+            // font-family: montserratBold;
+            color: @blue;
+        }
+        // background: firebrick;
+         .dbText {
+                position: absolute;
+                // left: 50%;
+                // top: 50%;
+                // transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                font-size: 2rem;
+                color: @blue;
+                text-transform: uppercase;
+                color: @red;
+                .caption{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+        .dbs {
+            position: absolute;
+            top: 3rem;
+            bottom: 0;
+            width: 100%;
+            overflow: auto;
+            // text-align: center;
+           
+            .db {
+                position: relative;
+                width: 100%;
+                height: 3rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+                // line-height: 3rem;
+                .text {
+                    position: absolute;
+                    left: 10rem;
+                    line-height: 3rem;
+                    text-transform: uppercase;
+                }
+                .options {
+                    position: absolute;
+                    width: 2rem;
+                    left:3rem;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+    .logsList {
+        position: absolute;
+        left: 104rem;
+        top: 5rem;
+        right: 0;
+        bottom: 0;
+        .headerLog {
+            .dbContainer.dbListHeader;
+        }
+          .logText {
+                position: absolute;
+                font-size: 2rem;
+                color: @red;
+                // top: 50%;
+                // left: 50%;
+                text-transform: uppercase;
+                // transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                .caption{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                }
+            }
+        .logs {
+            position: absolute;
+            top: 3rem;
+            width: 100%;
+            bottom: 0;
+          .log{
+              position: relative;
+              height: 2rem;
+              width: 100%;
+              line-height: 2rem;
+              margin-left: 2rem;
+              margin-top: 3rem;
+              font-size: @f3;
+              .time{
+                  position: relative;
+                  display: inline-block;
+                  margin-right: 0.2rem;
+                //   float: left;
+                //   color: @blue;
+                  &.fail{
+                      color: @red;
+                  }
+                  &.success{
+                      color: green;
+                  }
+              }
+              .operation{
+                  position: relative;
+                  display: inline-block;
+                  &.success{
+                      color:green;
+                  }
+                  &.fail{
+                      color: @red;
+                  }
+              }
+          }
+        }
+    }
+}

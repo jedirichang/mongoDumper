@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href='../css/animate.css'>
+    <link rel="stylesheet" type="text/css" href="../css/screen.css">
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+    <link rel="stylesheet" type="text/css" href="../css/font.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="header">
+            Mongo Dumper
+            <div class="reset">
+                reset
+            </div>
+        </div>
+
+        <img src="../images/loading.gif" class="loader" alt="">
+        <div class="notify">
+
+        </div>
+        <div class="inputs">
+            <div class="values">
+                <div class="source">
+                    <div class="headerInput">Source</div>
+                    <input type="text" name="url" class="url enter" placeholder="Source URL" value="" />
+                    <input type="text" name="port" class="port enter" placeholder="Source port" value="">
+                    <div class="btn">DB List</div>
+                </div>
+                <div class="destination">
+                    <div class="headerInput">Destination</div>
+                    <input type="text" name="url" class="url enter" placeholder="Destination URL" value="">
+                    <input type="text" name="port" class="port enter" placeholder="Destination port" value="">
+                </div>
+            </div>
+            <div class="footer">
+                <div class="dumpAll btn" data-id="all">
+                    Backup All
+                </div>
+                <div class="dumpSelected btn" data-id="selected">
+                    Backup Selected
+                </div>
+            </div>
+        </div>
+        <div class="dbContainer">
+            <div class="dbListHeader">
+                Source DB List
+            </div>
+            <div class="dbText">
+                <div class="caption">No Db to show</div>
+            </div>
+            <div class="dbs">
+
+            </div>
+        </div>
+        <div class="logsList">
+            <div class="headerLog">
+                Logs
+            </div>
+            <div class="logText">
+                <div class="caption">No Logs to show</div>
+
+            </div>
+            <div class="logs">
+
+            </div>
+            <div class="footer">
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../scripts/socket.io.js"></script>
+<script src="../scripts/jquery.js" type="text/javascript"></script>
+<script src="../scripts/jsrender.js" type="text/javascript"></script>
+<script src="../scripts/jsviews.js" type="text/javascript"></script>
+<script src="../scripts/transit.js" type="text/javascript"></script>
+<script src="../scripts/Chart.min.js" type="text/javascript"></script>
+<script src="../scripts/moment.min.js" type="text/javascript"></script>
+<script src="../js/base.js" type="text/javascript"></script>
+<script src="../js/index.js" type="text/javascript"></script>
+<script src="../js/helper.js" type="text/javascript"></script>
+
+<script id="dbTemplate" type="text/x-jsrender">
+    <div class="db">
+        <img src="../images/uncheck.png" class="check options" alt="">
+        <div class="text">{{: name}}</div>
+    </div>
+</script>
+<script id="logListTemplate" type="text/x-jsrender">
+    <div class="log">
+        <div class="time {{:type}}">{{:time}}</div>
+        <div class="operation {{:type}}">{{:operation}}</div>
+    </div>
+</script>
+
+</html>
