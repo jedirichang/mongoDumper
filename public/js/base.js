@@ -1,5 +1,5 @@
 ﻿﻿var eventToUse = 'click';
-var appUrl = 'http://10.0.0.9:3000/';
+var appUrl = 'http://localhost:3000/';
 // var appUrl = 'http://10.0.0.2:3000/';
 
 function makeTemplates() {

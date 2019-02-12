@@ -16,7 +16,7 @@ global.server = app.listen(serverPort, () => {
 global.io = require('socket.io').listen(global.server);
 
 app.use(express.static(path.join(__dirname, "public")));
-app.get('/dumper', function(req, res) {
+app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/views/index.html');
 });
 
